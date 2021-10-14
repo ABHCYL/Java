@@ -8,17 +8,26 @@
 
 在JAVA_HOME中不再是JDK的绝对路径（直接填写不同JDK版本的各自的路径当然可行，但是不便于切换），只需填入%JAVA_HOMEXX%即可，如下图。
 
-使用JDK8
- 
-使用JDK11
- 
-按理说，版本切换到这里就应该成功了。但是，在我的电脑上，更改JAVA_HOME变量的指向只是切换了javac的版本，而Java版本没有跟着变动。如图
- 
- 
-按网上的解决办法，存在一个路径（下图第一个变量值），
- 
-在此路径中有3个exe文件（即命令java），
- 
+使用JDK8  
+
+![](https://raw.githubusercontent.com/ABHCYL/pitcure/main/jdk8.png)   
+
+使用JDK11  
+
+![](https://raw.githubusercontent.com/ABHCYL/pitcure/main/jdk11.png)   
+
+按理说，版本切换到这里就应该成功了。但是，在我的电脑上，更改JAVA_HOME变量的指向只是切换了javac的版本，而Java版本没有跟着变动。如图  
+
+![](https://raw.githubusercontent.com/ABHCYL/pitcure/main/javac_version.png) 
+![](https://raw.githubusercontent.com/ABHCYL/pitcure/main/java_version.png) 
+
+按网上的解决办法，存在一个路径（下图第一个变量值），   
+![](https://raw.githubusercontent.com/ABHCYL/pitcure/main/javapath.png)   
+
+在此路径中有3个exe文件（即命令java），  
+![](https://raw.githubusercontent.com/ABHCYL/pitcure/main/javapath_exe.png)   
+
 在安装第一个jdk8时，安装包会把这3个exe（对于8版本）安装在这个路径位置，并且这个位置在路径查找时优先级比用户自定义的JAVA_HOME更高，所以运行时的java version是8而javac是11 version，解决办法很简单，删掉3个exe文件就好了。
-如下图，javac 和java 版本一致。
- 
+
+如下图，javac 和java 版本一致。   
+![](https://raw.githubusercontent.com/ABHCYL/pitcure/main/javacequaljava.png)
